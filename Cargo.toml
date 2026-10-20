@@ -1,0 +1,37 @@
+[workspace]
+resolver = "2"
+members = ["crates/common", "crates/server", "crates/client"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# WebSocket (shared by server + client)
+tokio-tungstenite = "0.24"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Crypto
+crypto_box = { version = "0.9", features = ["std", "chacha20"] }
+x25519-dalek = "2"
+argon2 = "0.5"
+rand = "0.8"
+sha2 = "0.10"
+zeroize = "1"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Errors
+thiserror = "1"
+
+# CLI
+clap = { version = "4", features = ["derive"] }

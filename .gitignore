@@ -1,0 +1,7 @@
+/target
+# Local data (identity + message history). By default these live in
+# ~/.encrypted-chat/data, outside the repo, but ignore them here too in case
+# someone runs with a relative --data-dir.
+identity.json
+*.db
+.encrypted-chat/

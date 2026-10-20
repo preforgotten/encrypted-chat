@@ -1,0 +1,23 @@
+[package]
+name = "echat-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "echat-server"
+path = "src/main.rs"
+
+[dependencies]
+echat-common = { path = "../common" }
+tokio = { workspace = true }
+tokio-tungstenite = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+thiserror = { workspace = true }
+clap = { workspace = true }
+futures-util = "0.3"
+anyhow = "1"
+dashmap = "6"

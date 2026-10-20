@@ -1,0 +1,21 @@
+[package]
+name = "echat-common"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+crypto_box = { workspace = true }
+x25519-dalek = { workspace = true }
+rand = { workspace = true }
+sha2 = { workspace = true }
+zeroize = { workspace = true }
+thiserror = { workspace = true }
+base64 = "0.22"
+argon2 = { workspace = true }
+chacha20poly1305 = "0.10"
+
+[dev-dependencies]
+hex = "0.4"
